@@ -1,7 +1,7 @@
         {{ with $.Site.Params.disqusShortname }}
         <section id="comments">
             <div id="disqus_thread" class="post-comments"></div>
-            <script type="text/javascript">
+            <script>
               if (window.location.hostname != "localhost") {
                 var disqus_shortname = '{{ . }}';
                 (function() {
