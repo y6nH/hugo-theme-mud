@@ -1,5 +1,5 @@
 The MIT License (MIT)
-Copyright © 2013 Oswaldo Acauan <hello@oswaldoacauan.com>
+Copyright © 2017 Hugh Spiller
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the “Software”), to deal
