@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
+<body>
+<header id="site-header">
+	<div class="container">
+		<h1 class="blog-title">{{ .Site.Title }}</h1>
+		<p class="blog-description">{{ .Site.Params.description }}</p>
+	</div>
+</header>
+<main class="content" role="main">
+	<section class="post-content">
+        {{ .Content }}
+    </section>
+</main>
+{{ partial "footer.html" . }}
+</body>
+</html>
