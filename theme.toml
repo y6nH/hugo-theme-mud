@@ -8,5 +8,5 @@ features = ["blog", "pagination", "RSS", "Pygments highlighting"]
 min_version = 0.14
 
 [author]
-  name = "Hugh Spiller"
-  homepage = "https://y6nh.github.io"
+name = "Hugh Spiller"
+homepage = "https://y6nh.github.io"

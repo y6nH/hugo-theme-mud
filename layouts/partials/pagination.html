@@ -5,11 +5,13 @@
     &lt;&nbsp;Newer&nbsp;
   </a>
   {{ end }}
-	<span class="post-list-pagination-item post-list-pagination-item-current">Page {{.Paginator.PageNumber}} of {{.Paginator.TotalPages}}</span>
-{{ if .Paginator.HasNext }}
+  <span class="post-list-pagination-item post-list-pagination-item-current"
+    >Page {{.Paginator.PageNumber}} of {{.Paginator.TotalPages}}</span
+  >
+  {{ if .Paginator.HasNext }}
   <a href="{{.Paginator.Next.URL}}" class="older-posts" rel="next">
     &nbsp;Older&nbsp;>
   </a>
-{{ end }}
+  {{ end }}
 </nav>
 {{ end }}

@@ -1,6 +1,6 @@
-    <head>
-        <title>{{ .Title }} · {{ .Site.Title }}</title>
-        <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css"/>
-        <link rel="alternate" type="application/rss+xml" href="{{ .RSSLink }}"/>
-        {{ partial "meta.html" . }}
-    </head>
+<head>
+  <title>{{ .Title }} · {{ .Site.Title }}</title>
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
+  <link rel="alternate" type="application/rss+xml" href="{{ .RSSLink }}" />
+  {{ partial "meta.html" . }}
+</head>

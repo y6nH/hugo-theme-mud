@@ -1,7 +1,14 @@
-    <footer id="site-footer">
-        <div class="container">
-			<section class="footer-credits">Made with <a href="http://gohugo.io/">Hugo</a> by {{ .Site.Params.author }}.</section>
-            <section class="footer-copyright">&copy; {{ .Date.Year }}. {{ .Site.Copyright | safeHTML }}</section>
-            <section class="footer-rss"><a href="{{ .Site.BaseURL }}index.xml" title="RSS feed">RSS</a></section>
-        </div>
-    </footer>
+<footer id="site-footer">
+  <div class="container">
+    <section class="footer-credits">
+      Made with <a href="http://gohugo.io/">Hugo</a> by {{ .Site.Params.author
+      }}.
+    </section>
+    <section class="footer-copyright">
+      &copy; {{ .Date.Year }}. {{ .Site.Copyright | safeHTML }}
+    </section>
+    <section class="footer-rss">
+      <a href="{{ .Site.BaseURL }}index.xml" title="RSS feed">RSS</a>
+    </section>
+  </div>
+</footer>
