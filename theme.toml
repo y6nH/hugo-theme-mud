@@ -4,7 +4,7 @@ licenselink = "https://y6nh.mit-license.org/"
 description = "Mud is a simple dark theme for lightweight sites"
 homepage = "https://y6nh.github.io/mud/"
 tags = ["blog", "dark", "lightweight"]
-features = ["blog", "disqus", "google analytics", "pagination", "RSS", "Pygments highlighting"]
+features = ["blog", "pagination", "RSS", "Pygments highlighting"]
 min_version = 0.14
 
 [author]

@@ -25,13 +25,11 @@
         </section>
                         
         <section class="f-2">
-
             {{ with .Params.tags }}
             	<span class="f-post-tags">
             	{{ delimit  . ", " }}
             	</span>
             {{ end }}
-        </section>
-        {{ partial "disqus.html" . }}        
+        </section>  
     </footer>
 </article>
