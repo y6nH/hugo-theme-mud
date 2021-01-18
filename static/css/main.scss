@@ -8,14 +8,14 @@ $colour-offblack:       #272a2b;
 $colour-offblack-dark:  #1e1f19;
 $colour-offblack-yellow:#3e3c38;
 
-$colour-shadow:         rgba(8,16,18,0.5);
-$colour-shadow-blue:    rgba(102,145,153,0.4);
-$colour-shadow-green:   rgba(153,139,102,0.4);
+$colour-shadow:         #1e1f1988;
+$colour-shadow-blue:    #66919966;
+$colour-shadow-yellow:  #998b6666;
 
-$colour-red-pale:       #ffbeb8;
-$colour-red-dim:        #ff857a;
-$colour-red:            #c74438;
-$colour-yellow-pale:    #ffe5a3;
+$colour-red-pale:       #ffb8bd;
+$colour-red-dim:        #e28187;
+$colour-red:            #c73842;
+$colour-yellow-pale:    #ead59f;
 $colour-yellow:         #ffcb47;
 $colour-yellow-dim:     #998b66;
 $colour-green-pale:     #e9ff99;
@@ -195,7 +195,7 @@ img, .side {
 img {
    max-width: 100%;
    height: auto;
-   background: linear-gradient(43deg, $colour-shadow-blue, $colour-shadow-green);
+   background: linear-gradient(43deg, $colour-shadow-blue, $colour-shadow-yellow);
 }
 
 audio {
