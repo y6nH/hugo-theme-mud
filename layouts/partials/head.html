@@ -1,6 +1,9 @@
 <head>
   <title>{{ .Title }} · {{ .Site.Title }}</title>
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
-  <link rel="alternate" type="application/rss+xml" href="{{ .RSSLink }}" />
+  {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end -}}
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
   {{ partial "meta.html" . }}
 </head>
