@@ -1,16 +1,15 @@
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta
-  name="description"
-  content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}"
-/>
+<meta name="description" content="
+{{- if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end -}}
+" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <meta name="author" content="{{ .Site.Params.author }}" />
-{{ with .Site.Params.keywords }}
+{{- with .Site.Params.keywords -}}
 <meta
   name="keywords"
   content="{{ range $index, $element := $.Site.Params.keywords }}{{ if gt $index 0 }}, {{ end }}{{ . | safeHTML }}{{ else }}{{ . | safeHTML }}{{ end }}"
 />
-{{ end }}
-{{ template "_internal/opengraph.html" . }}
-{{ hugo.Generator }}
+{{- end -}}
+{{- template "_internal/opengraph.html" . -}}
+{{- hugo.Generator -}}

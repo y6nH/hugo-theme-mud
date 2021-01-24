@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
-{{ partial "head.html" . }}
-<body>
-<header id="site-header">
-	<div class="container">
-		<h1 class="blog-title">{{ .Site.Title }}</h1>
-		<p class="blog-description">{{ .Site.Params.description }}</p>
-	</div>
-</header>
-<main class="content" role="main">
-	<section class="post-content">
-        {{ .Content }}
-    </section>
-</main>
-{{ partial "footer.html" . }}
-</body>
+  <head>
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
+    {{- range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    {{ partial "meta.html" . -}}
+  </head>
+  <body class="home">
+    <header id="site-header">
+      <div class="logo">
+        <img src="img/y6nH.svg" width="208" height="236"></img>
+      </div>
+      <div class="container">
+        <h1 class="blog-title">{{ .Site.Title }}</h1>
+        <p class="blog-description">{{ .Site.Params.description }}</p>
+      </div>
+    </header>
+    <main class="content" role="main">
+      <section class="post-content">
+        <article class="page">{{- .Content -}}</article>
+      </section>
+    </main>
+    {{- partial "footer.html" . -}}
+  </body>
 </html>
