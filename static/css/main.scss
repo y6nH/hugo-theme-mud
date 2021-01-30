@@ -90,6 +90,10 @@ h3 {
   }
 }
 
+#site-header {
+  margin: 3rem auto;
+}
+
 .blog-title.heading {
   font-size: 4rem;
   line-height: 0.5;
@@ -154,16 +158,19 @@ a[href^="#"]:hover::after {
   opacity: 1;
 }
 
-header,
-footer,
 article,
 hr {
   max-width: 50rem;
   margin: 3rem auto;
 }
 
-.home header {
+pre,
+header,
+footer,
+.categories {
   max-width: 61rem;
+  margin: auto;
+  clear: both;
 }
 
 article {
@@ -173,12 +180,6 @@ article {
 .flex.container {
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-pre,
-header,
-footer {
-  clear: both;
 }
 
 pre,
@@ -193,22 +194,22 @@ samp {
   tab-size: 3;
 }
 
-pre code {
-  box-shadow: none;
-  white-space: pre;
-}
-
-pre,
-aside,
-blockquote,
-.hide-box {
+pre {
   padding: 1rem;
   margin-top: 1rem;
+
+  code {
+    box-shadow: none;
+    white-space: pre;
+  }
 }
 
 aside,
 blockquote,
-.hide-box {
+.hide-box,
+.card {
+  padding: 1rem;
+  margin-top: 1rem;
   box-shadow: 0 1px 4px 1px $colour-shadow;
   border-left: 0.5rem solid $colour-yellow-dim;
   background: $colour-offblack-yellow;
@@ -349,6 +350,38 @@ time {
   opacity: 0;
   overflow: hidden;
 }
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+  .card {
+    flex: 1;
+    margin: 1rem;
+    a {
+      display: block;
+    }
+    &:nth-child(1){
+      border-color: $colour-green;
+    }
+    &:nth-child(2){
+      border-color: $colour-yellow;
+    }
+    &:nth-child(3){
+      border-color: $colour-pink;
+    }
+    &:nth-child(4){
+      border-color: $colour-red;
+    }
+    &:nth-child(5){
+      border-color: $colour-blue;
+    }
+    &:nth-child(6){
+      border-color: $colour-offwhite-dim-3;
+    }
+  }
+}
+
 
 /* Pygments highlighting */
 .highlight {

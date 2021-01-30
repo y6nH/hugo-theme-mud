@@ -1,19 +1,17 @@
 <article class="li {{ .Type }}">
     <header class="post-header">
-        <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <span class="post-time"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2 January 2006" }}</time></span>
-		<p class="post-excerpt-description">{{ .Description }}</p>
+      <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <span class="post-time"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2 January 2006" }}</time></span>
+		  <p class="post-excerpt-description">{{ .Description }}</p>
     </header>
-    
     <section class="post-excerpt">
         <p>{{ .Summary }}</p>
     </section>
-
     <footer class="post-footer">
         <span>
-            {{ with.Params.tags }}
-            	{{ delimit  . ", " }}
-            {{ end }}
+          {{ with.Params.tags }}
+            {{ delimit  . ", " }}
+          {{ end }}
         </span>
     </footer>
 	<hr/>
