@@ -29,6 +29,11 @@ $colour-blue-dark: #446c74;
 $colour-pink: #e166b8;
 $colour-pink-dim: #b34d91;
 
+// For light mode
+$colour-blue-alt: #0b9ab6;
+$colour-yellow-alt: #de9f00;
+$colour-green-alt: #97c100;
+
 // Other constants
 $transition-time: 0.2s;
 
@@ -43,8 +48,12 @@ a::after {
 html {
   background: $colour-offblack;
   color: $colour-offwhite;
-  font: 17px/1.5 "Segoe UI", "Noto Sans", Roboto, -apple-system,
-    sans-serif;
+  font: 17px/1.5 "Segoe UI", "Noto Sans", Roboto, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
 }
 
 h1,
@@ -54,7 +63,8 @@ h4,
 h5,
 h6,
 .blog-title.heading {
-  font-family: Alegreya, "Gentium Plus", "Linux Libertine", Georgia, C059, FreeSerif, serif;
+  font-family: Alegreya, "Gentium Plus", "Linux Libertine", Georgia, C059,
+    FreeSerif, serif;
   font-weight: 500;
   margin: 1em 0 0.5em;
   color: $colour-offwhite-dim-3;
@@ -83,7 +93,7 @@ h3 {
   margin: 3rem 1rem 0;
   z-index: -1;
 
-  img{
+  img {
     background: none;
     height: auto;
     width: 18rem;
@@ -362,22 +372,22 @@ time {
     a {
       display: block;
     }
-    &:nth-child(1){
+    &:nth-child(1) {
       border-color: $colour-green;
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       border-color: $colour-yellow;
     }
-    &:nth-child(3){
+    &:nth-child(3) {
       border-color: $colour-pink;
     }
-    &:nth-child(4){
+    &:nth-child(4) {
       border-color: $colour-red;
     }
-    &:nth-child(5){
+    &:nth-child(5) {
       border-color: $colour-blue;
     }
-    &:nth-child(6){
+    &:nth-child(6) {
       border-color: $colour-offwhite-dim-3;
     }
   }
@@ -385,133 +395,141 @@ time {
 
 /*  Light Mode */
 
-body.light {
+.light {
   color: $colour-offblack-dark;
   background: $colour-offwhite;
-  h1 { color: $colour-offblack-yellow; }
-  h2, h3, h4, h5, h6, .blog-title.heading { color: $colour-offblack; }
+  h1 {
+    color: $colour-offblack-yellow;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .blog-title.heading {
+    color: $colour-offblack;
+  }
   .blog-description,
-.post-excerpt-description,
-.author {
-  color: $colour-green-dim;
-}
-
-a {
-  color: $colour-blue;
-  &:active {
-    color: $colour-red-pale;
+  .post-excerpt-description,
+  .author {
+    color: $colour-green-alt;
   }
-  &:visited {
-    color: $colour-pink;
+
+  a {
+    color: $colour-blue-alt;
+    &:active {
+      color: $colour-red-dim;
+    }
+    &:visited {
+      color: $colour-pink-dim;
+    }
   }
-}
 
-a[href^="#"]::after,
-.footnote::before {
-  color: $colour-blue-pale;
-}
+  a[href^="#"]::after,
+  .footnote::before {
+    color: $colour-blue;
+  }
 
-pre,
-code,
-kbd,
-samp {
-  box-shadow: inset 0 1px 4px 1px $colour-shadow;
-  background: $colour-offblack-dark;
-}
+  pre,
+  code,
+  kbd,
+  samp {
+    box-shadow: inset 0 1px 4px 1px $colour-shadow;
+    background: $colour-offwhite-dim-1;
+  }
 
-aside,
-blockquote,
-.hide-box,
-.card {
-  box-shadow: 0 1px 4px 1px $colour-shadow;
-  border-color: $colour-yellow-dim;
-  background: $colour-offblack-yellow;
-}
-
-aside pre,
-aside code,
-aside kbd,
-aside samp,
-blockquote pre,
-blockquote code,
-blockquote kbd,
-blockquote samp,
-.hide-box pre,
-.hide-box code,
-.hide-box kbd,
-.hide-box samp {
-  background: $colour-offblack;
-}
-
-aside:target {
-  border-color: $colour-yellow;
-}
-mark {
-  background: $colour-blue-dark;
-  color: $colour-white;
-}
-
-.keyword {
-  color: $colour-yellow;
-}
-
-.string {
-  color: $colour-green;
-  fill: $colour-green;
-}
-
-mark .keyword {
-  color: $colour-yellow-pale;
-}
-
-mark .string {
-  color: $colour-green-pale;
-}
-
-.comment {
-  color: $colour-green-dim;
-}
-
-.blog-title.heading,
-.post-title a {
-  color: $colour-green;
-}
-
-.post-title a:visited {
-  color: $colour-blue-dim;
-}
-
-hr {
-  border: 1px solid $colour-offwhite-dim-3;
-}
-
-time {
-  color: $colour-blue-dim;
-}
-
-.hide-box label {
-  background: $colour-yellow-dim;
-  color: $colour-offblack-dark;
-}
-
-.categories
+  aside,
+  blockquote,
+  .hide-box,
   .card {
-    &:nth-child(1){
-      border-color: $colour-green;
+    box-shadow: 0 1px 4px 1px $colour-shadow;
+    border-color: $colour-yellow-alt;
+    background: $colour-offwhite-dim-2;
+  }
+
+  aside pre,
+  aside code,
+  aside kbd,
+  aside samp,
+  blockquote pre,
+  blockquote code,
+  blockquote kbd,
+  blockquote samp,
+  .hide-box pre,
+  .hide-box code,
+  .hide-box kbd,
+  .hide-box samp {
+    background: $colour-offwhite-dim-1;
+  }
+
+  aside:target {
+    border-color: $colour-yellow-alt;
+  }
+  mark {
+    background: $colour-blue-pale;
+    color: $colour-offblack-dark;
+  }
+
+  .keyword {
+    color: $colour-yellow-alt;
+  }
+
+  .string {
+    color: $colour-green-alt;
+    fill: $colour-green-alt;
+  }
+
+  mark .keyword {
+    color: $colour-yellow-dim;
+  }
+
+  mark .string {
+    color: $colour-green-alt;
+  }
+
+  .comment {
+    color: $colour-green-dim;
+  }
+
+  .blog-title.heading,
+  .post-title a {
+    color: $colour-green-alt;
+  }
+
+  .post-title a:visited {
+    color: $colour-blue-dim;
+  }
+
+  hr {
+    border: 1px solid $colour-offblack-yellow;
+  }
+
+  time {
+    color: $colour-blue-dim;
+  }
+
+  .hide-box label {
+    background: $colour-yellow-pale;
+    color: $colour-offblack-dark;
+  }
+
+  .categories .card {
+    &:nth-child(1) {
+      border-color: $colour-green-alt;
     }
-    &:nth-child(2){
-      border-color: $colour-yellow;
+    &:nth-child(2) {
+      border-color: $colour-yellow-alt;
     }
-    &:nth-child(3){
+    &:nth-child(3) {
       border-color: $colour-pink;
     }
-    &:nth-child(4){
+    &:nth-child(4) {
       border-color: $colour-red;
     }
-    &:nth-child(5){
-      border-color: $colour-blue;
+    &:nth-child(5) {
+      border-color: $colour-blue-alt;
     }
-    &:nth-child(6){
+    &:nth-child(6) {
       border-color: $colour-offwhite-dim-3;
     }
   }
@@ -712,8 +730,30 @@ time {
 }
 
 @media (prefers-contrast: more) {
-  html, h1, h2 {
+  html,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     background: $colour-black;
     color: $colour-white;
+    .light & {
+      background: $colour-white;
+      color: $colour-black;
+    }
+  }
+
+  aside,
+  blockquote,
+  .hide-box,
+  .card {
+    box-shadow: 0 1px 0 1px $colour-offwhite;
+    background: $colour-offblack-dark;
+    .light & {
+      box-shadow: 0 1px 0 1px $colour-offblack;
+      background: $colour-offwhite-dim-1;
+    }
   }
 }
